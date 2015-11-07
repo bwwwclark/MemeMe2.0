@@ -10,14 +10,15 @@ import Foundation
 import UIKit
 
 class TableViewController: UITableViewController {
-    override func viewDidLoad(){
+    
     var memes: [Meme] {
         
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
         
         //return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
-        }
-        
+    }
+    
+    override func viewDidLoad(){
     }
     
     
@@ -25,9 +26,8 @@ class TableViewController: UITableViewController {
         return memes.count
     }
 
-//
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("memeCells", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("memeCell", forIndexPath: indexPath)
         let meme = memes[indexPath.row]
         cell.imageView?.image = meme.memedImage
         cell.textLabel?.text = meme.topTextField
@@ -35,13 +35,14 @@ class TableViewController: UITableViewController {
         
     }
 
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        let detailController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
-//        detailController.meme = memes[indexPath.row]
-//        navigationController!.pushViewController(detailController, animated: true)
-//        
-//    }
-//
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let detailController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+        detailController.meme = memes[indexPath.row]
+        navigationController!.pushViewController(detailController, animated: true)
+        
+    }
+
+    
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
