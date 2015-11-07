@@ -147,9 +147,6 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="xC7-0E-a60" id="OeG-6m-8Zq"/>
-                        </connections>
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Meme Table" id="uFi-3V-iB9">
@@ -161,10 +158,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myTableView" destination="eQF-TY-Lmj" id="sjK-ky-lTg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wGX-Em-nv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="875" y="-140"/>
+            <point key="canvasLocation" x="801" y="-146"/>
         </scene>
         <!--DetailViewController-->
         <scene sceneID="1cv-Ek-iO3">

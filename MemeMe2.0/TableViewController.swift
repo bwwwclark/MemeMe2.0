@@ -17,14 +17,30 @@ class TableViewController: UITableViewController {
         
     }
     
+    @IBOutlet weak var myTableView: UITableView!
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        myTableView.delegate = self
+        myTableView.dataSource = self
+        
+        
+    }
+ 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        myTableView.reloadData()
+        
+        
+    }
+    
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("memeCell") as! UITableViewCell!
-        let meme = memes[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("memeCell", forIndexPath: indexPath) as! UITableViewCell!
+        let meme = memes[indexPath.item]
         cell.imageView?.image = meme.memedImage
         cell.textLabel?.text = meme.topTextField
         
