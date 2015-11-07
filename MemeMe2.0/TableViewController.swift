@@ -31,6 +31,8 @@ class TableViewController: UITableViewController {
         let meme = memes[indexPath.row]
         cell.imageView?.image = meme.memedImage
         cell.textLabel?.text = meme.topTextField
+        cell.detailTextLabel?.text = meme.bottomTextField
+        
         return cell
         
     }

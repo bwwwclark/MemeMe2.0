@@ -17,10 +17,11 @@ class DetailViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var topText: UITextField!
 
     @IBOutlet weak var bottomText: UITextField!
-
+    
+    var meme : Meme!
     
     override func viewWillAppear(animate: Bool){
-        var meme: Meme!
+        
         
         topText.text = meme.topTextField
         bottomText.text = meme.bottomTextField

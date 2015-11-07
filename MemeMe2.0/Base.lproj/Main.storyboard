@@ -129,45 +129,40 @@
             </objects>
             <point key="canvasLocation" x="-39" y="-116"/>
         </scene>
-        <!--Title-->
+        <!--TableViewController-->
         <scene sceneID="CbI-Wb-Kyl">
             <objects>
-                <tableViewController id="xC7-0E-a60" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="TableViewController" storyboardIdentifier="TableViewController" title="TableViewController" id="xC7-0E-a60" customClass="TableViewController" customModule="MemeMe2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eQF-TY-Lmj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="azI-Tl-c8O">
-                            <rect key="frame" x="0.0" y="136" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Title" id="YoD-7I-waM">
-                                    <barButtonItem key="backBarButtonItem" title="back" id="2Zq-ey-adx"/>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeCell" textLabel="psK-hx-NdK" detailTextLabel="hZd-Ha-48h" style="IBUITableViewCellStyleValue1" id="QBS-FO-Ijg">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="memeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeCell" textLabel="p2M-ka-r14" detailTextLabel="MPN-RR-PCe" imageView="1ps-u5-ZZL" style="IBUITableViewCellStyleValue1" id="iiq-vf-SW1">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QBS-FO-Ijg" id="r5c-zE-pqV">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iiq-vf-SW1" id="Vje-QE-jWD">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="psK-hx-NdK">
-                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p2M-ka-r14">
+                                            <rect key="frame" x="46" y="12" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hZd-Ha-48h">
-                                            <rect key="frame" x="529" y="12" width="56" height="20"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MPN-RR-PCe">
+                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="imageView" id="1ps-u5-ZZL">
+                                            <rect key="frame" x="15" y="13" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -177,21 +172,27 @@
                             <outlet property="delegate" destination="xC7-0E-a60" id="Clc-VH-UYc"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="Z2j-8m-NTO"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="C9j-5I-KY8"/>
-                        <barButtonItem title="Item" systemItem="add" id="EDE-A6-I90">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="uFi-3V-iB9">
+                        <barButtonItem key="backBarButtonItem" title="back" id="PMV-Uw-8xt"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="EDE-A6-I90">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="ghn-MI-hkW"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Title" id="uFi-3V-iB9"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cellDetail" destination="MPN-RR-PCe" id="LE5-7S-vdR"/>
+                        <outlet property="imageView" destination="1ps-u5-ZZL" id="oiP-Ez-bG5"/>
+                        <outlet property="memeCell" destination="iiq-vf-SW1" id="gLl-de-G3C"/>
+                        <outlet property="tableCell" destination="iiq-vf-SW1" id="pP9-6v-bcA"/>
+                        <outlet property="textLabel" destination="p2M-ka-r14" id="D7Y-ow-OLl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wGX-Em-nv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="-125"/>
+            <point key="canvasLocation" x="815" y="-125"/>
         </scene>
         <!--DetailViewController-->
         <scene sceneID="1cv-Ek-iO3">
@@ -264,15 +265,14 @@
                             <outlet property="delegate" destination="LZz-X7-esP" id="yaQ-Ia-p08"/>
                         </connections>
                     </collectionView>
-                    <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="JbN-zf-72u"/>
-                        <barButtonItem systemItem="add" id="n5d-az-aKs">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="YdP-ny-fMr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="n5d-az-aKs">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="t7g-DQ-uPs"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" id="YdP-ny-fMr"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bee-tk-eUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -473,7 +473,10 @@
             <point key="canvasLocation" x="1471" y="-140"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="imageView" width="16" height="16"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="t7g-DQ-uPs"/>
+        <segue reference="ghn-MI-hkW"/>
     </inferredMetricsTieBreakers>
 </document>
