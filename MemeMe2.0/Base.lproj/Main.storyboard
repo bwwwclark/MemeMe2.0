@@ -63,7 +63,7 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Oxr-HM-NUx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2HP-rR-v64"/>
                             <constraint firstItem="bGq-Yi-SV7" firstAttribute="width" secondItem="vxE-Ym-BNV" secondAttribute="width" id="7bR-Yj-qsL"/>
@@ -138,42 +138,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="memeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeCell" textLabel="p2M-ka-r14" detailTextLabel="MPN-RR-PCe" imageView="1ps-u5-ZZL" style="IBUITableViewCellStyleValue1" id="iiq-vf-SW1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="memeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeCell" id="iiq-vf-SW1">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iiq-vf-SW1" id="Vje-QE-jWD">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p2M-ka-r14">
-                                            <rect key="frame" x="46" y="12" width="32" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MPN-RR-PCe">
-                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="imageView" id="1ps-u5-ZZL">
-                                            <rect key="frame" x="15" y="13" width="16" height="16"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </imageView>
-                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="xC7-0E-a60" id="oBz-zL-9dp"/>
-                            <outlet property="delegate" destination="xC7-0E-a60" id="Clc-VH-UYc"/>
+                            <outlet property="dataSource" destination="xC7-0E-a60" id="OeG-6m-8Zq"/>
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="uFi-3V-iB9">
+                    <navigationItem key="navigationItem" title="Meme Table" id="uFi-3V-iB9">
                         <barButtonItem key="backBarButtonItem" title="back" id="PMV-Uw-8xt"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="EDE-A6-I90">
                             <connections>
@@ -182,17 +161,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="cellDetail" destination="MPN-RR-PCe" id="LE5-7S-vdR"/>
-                        <outlet property="imageView" destination="1ps-u5-ZZL" id="oiP-Ez-bG5"/>
-                        <outlet property="memeCell" destination="iiq-vf-SW1" id="gLl-de-G3C"/>
-                        <outlet property="tableCell" destination="iiq-vf-SW1" id="pP9-6v-bcA"/>
-                        <outlet property="textLabel" destination="p2M-ka-r14" id="D7Y-ow-OLl"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wGX-Em-nv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815" y="-125"/>
+            <point key="canvasLocation" x="875" y="-140"/>
         </scene>
         <!--DetailViewController-->
         <scene sceneID="1cv-Ek-iO3">
@@ -224,7 +196,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="bottomtext" destination="HlD-YR-NnI" id="Kq8-LR-Zsp"/>
@@ -353,7 +325,7 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Bo8-Eb-GY1" firstAttribute="top" secondItem="FgC-Cz-vCu" secondAttribute="bottom" id="6MI-WZ-rSP"/>
                             <constraint firstItem="FgC-Cz-vCu" firstAttribute="leading" secondItem="diO-tb-Wfg" secondAttribute="leadingMargin" constant="-20" id="6WH-Sn-HsB"/>
@@ -441,7 +413,7 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="61P-he-a65" firstAttribute="bottom" secondItem="atv-Gs-OlZ" secondAttribute="bottom" id="6xL-VO-IUu"/>
                             <constraint firstItem="RlP-fY-J5L" firstAttribute="leading" secondItem="E9w-gP-Ti1" secondAttribute="leadingMargin" constant="-20" id="7Vt-8n-KDM"/>
@@ -473,9 +445,6 @@
             <point key="canvasLocation" x="1471" y="-140"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="imageView" width="16" height="16"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ghn-MI-hkW"/>
     </inferredMetricsTieBreakers>
