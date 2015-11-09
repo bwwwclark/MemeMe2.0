@@ -48,5 +48,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         textField.textAlignment = .Center
     }
 
+    @IBAction func editButton(sender: AnyObject) {
+        //perform segue with identifier and pass the text and image to meme editor view
+    }
     
 }

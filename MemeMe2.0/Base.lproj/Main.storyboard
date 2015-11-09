@@ -187,20 +187,33 @@
                                     <constraint firstAttribute="height" constant="360" id="nnY-9V-O06"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HlD-YR-NnI">
-                                <rect key="frame" x="207" y="427" width="187" height="53"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2LG-2A-MzD">
                                 <rect key="frame" x="201" y="120" width="199" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HlD-YR-NnI">
+                                <rect key="frame" x="207" y="427" width="187" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIE-D3-OdB">
+                                <rect key="frame" x="277" y="500" width="46" height="30"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kx-An-pco">
+                                <rect key="frame" x="277" y="500" width="46" height="30"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editButton:" destination="waB-Yg-3ZP" eventType="touchUpInside" id="yOW-0p-BMZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="HlD-YR-NnI" firstAttribute="centerX" secondItem="831-69-vgq" secondAttribute="centerX" id="7MD-iD-1lk"/>
+                            <constraint firstItem="nIE-D3-OdB" firstAttribute="centerX" secondItem="z9r-LK-t58" secondAttribute="centerX" id="8aV-i0-bMv"/>
+                            <constraint firstItem="nIE-D3-OdB" firstAttribute="top" secondItem="HlD-YR-NnI" secondAttribute="bottom" constant="20" id="QfU-Li-2Sl"/>
                             <constraint firstItem="831-69-vgq" firstAttribute="centerY" secondItem="z9r-LK-t58" secondAttribute="centerY" id="T8P-Lx-UUP"/>
                             <constraint firstItem="831-69-vgq" firstAttribute="centerX" secondItem="z9r-LK-t58" secondAttribute="centerX" id="UB4-3M-0nT"/>
                             <constraint firstItem="2LG-2A-MzD" firstAttribute="top" secondItem="831-69-vgq" secondAttribute="top" id="X9L-9G-t9f"/>
@@ -226,49 +239,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0kY-3y-qy3">
-                            <size key="itemSize" width="196" height="122"/>
+                            <size key="itemSize" width="193" height="153"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CustomMemeCell" reuseIdentifier="CustomMemeCell" id="Iaf-Bh-6gA" customClass="CustomMemeCell" customModule="MemeMe2_0" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="196" height="122"/>
+                                <rect key="frame" x="0.0" y="64" width="193" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="196" height="122"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="193" height="153"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8L-9W-uQi">
-                                            <rect key="frame" x="77" y="8" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biV-Dt-paA">
-                                            <rect key="frame" x="77" y="93" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tkZ-2f-DT1">
-                                            <rect key="frame" x="53" y="26" width="90" height="70"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="90" id="NY7-Hc-TCt"/>
-                                                <constraint firstAttribute="height" constant="70" id="R4h-aQ-py7"/>
-                                            </constraints>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkZ-2f-DT1">
+                                            <rect key="frame" x="51" y="32" width="90" height="90"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8L-9W-uQi">
+                                            <rect key="frame" x="75" y="8" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biV-Dt-paA">
+                                            <rect key="frame" x="75" y="124" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
                                     <constraint firstItem="x8L-9W-uQi" firstAttribute="centerX" secondItem="Iaf-Bh-6gA" secondAttribute="centerX" id="2OM-SS-sbc"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="biV-Dt-paA" secondAttribute="bottom" id="9JR-JW-mZU"/>
+                                    <constraint firstAttribute="topMargin" secondItem="x8L-9W-uQi" secondAttribute="top" id="BOC-qn-OmO"/>
                                     <constraint firstItem="tkZ-2f-DT1" firstAttribute="centerY" secondItem="Iaf-Bh-6gA" secondAttribute="centerY" id="U7N-wQ-67f"/>
                                     <constraint firstItem="biV-Dt-paA" firstAttribute="centerX" secondItem="Iaf-Bh-6gA" secondAttribute="centerX" id="hci-Fg-qxv"/>
                                     <constraint firstItem="tkZ-2f-DT1" firstAttribute="centerX" secondItem="Iaf-Bh-6gA" secondAttribute="centerX" id="zHl-dX-slk"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="backgroundView" destination="gMr-t3-hMm" id="UtQ-Dx-uPw"/>
                                     <outlet property="bottomTextLabel" destination="biV-Dt-paA" id="tii-a7-NNS"/>
                                     <outlet property="imageView" destination="tkZ-2f-DT1" id="3Pb-PI-j9B"/>
                                     <outlet property="topTextLabel" destination="x8L-9W-uQi" id="2QR-Lh-Gca"/>
@@ -276,8 +286,8 @@
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="dataSource" destination="LZz-X7-esP" id="dL9-48-xNf"/>
-                            <outlet property="delegate" destination="LZz-X7-esP" id="yaQ-Ia-p08"/>
+                            <outlet property="dataSource" destination="LZz-X7-esP" id="FtQ-2G-CJG"/>
+                            <outlet property="delegate" destination="LZz-X7-esP" id="Nfb-8j-TYf"/>
                         </connections>
                     </collectionView>
                     <toolbarItems/>
@@ -289,8 +299,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="flowLayout" destination="0kY-3y-qy3" id="Qnm-aa-BxO"/>
+                        <outlet property="myCollectionView" destination="gMr-t3-hMm" id="AUj-lK-bJg"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bee-tk-eUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <collectionViewFlowLayout minimumLineSpacing="10" minimumInteritemSpacing="10" id="pna-6g-8GQ">
+                    <size key="itemSize" width="193" height="153"/>
+                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </collectionViewFlowLayout>
             </objects>
             <point key="canvasLocation" x="719" y="618"/>
         </scene>
