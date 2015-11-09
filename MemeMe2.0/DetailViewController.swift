@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class DetailViewController: UIViewController,UITextFieldDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -22,7 +22,8 @@ class DetailViewController: UIViewController,UITextFieldDelegate {
     
     override func viewWillAppear(animate: Bool){
         
-        
+        prepTextField(bottomText,defaultText: "BOTTOM")
+        prepTextField(topText,defaultText: "TOP")
         topText.text = meme.topTextField
         bottomText.text = meme.bottomTextField
         imageView.image = meme.image

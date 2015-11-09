@@ -18,6 +18,7 @@ class TableViewController: UITableViewController {
     }
     
     @IBOutlet weak var myTableView: UITableView!
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         myTableView.delegate = self
@@ -50,10 +51,11 @@ class TableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
-        detailController.meme = memes[indexPath.row]
+        detailController.meme = memes[indexPath.item]
         navigationController!.pushViewController(detailController, animated: true)
         
     }
+
 
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

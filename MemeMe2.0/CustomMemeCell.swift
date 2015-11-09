@@ -9,10 +9,13 @@
 import Foundation
 import UIKit
 
-class CustomMemeCell {
-    @IBOutlet weak var customMemeCell: UICollectionViewCell?
+class CustomMemeCell: UICollectionViewCell {
     
-    
+    @IBOutlet weak var topTextLabel: UILabel!
     
      
+    @IBOutlet weak var bottomTextLabel: UILabel!
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
 }

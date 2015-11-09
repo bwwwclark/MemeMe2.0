@@ -169,18 +169,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
         return memedImage
     }
-    
-    func save(_:Meme){
-        //saves the meme
-        let meme = Meme(
-            topTextField: TopText.text!,
-            bottomTextField: BottomText.text!,
-            image: imageView.image!,
-            memedImage: memeImage()
-        )
+   
         
+    func save(meme :Meme) {
+            (UIApplication.sharedApplication().delegate as! AppDelegate).memes.append(meme)
     }
-
     
     @IBAction func photosButton(sender: AnyObject) {
         //launch photo picker
