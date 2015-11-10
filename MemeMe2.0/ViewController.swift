@@ -25,15 +25,33 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     @IBOutlet weak var beginText: UILabel!
     
+    var detailMeme = Meme!()
+    var fromEditButton = Bool?()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         // set default text
         
+      
         prepTextField(BottomText,defaultText: "BOTTOM")
         prepTextField(TopText,defaultText: "TOP")
         shareButton.enabled = false
+        
+//        if fromEditButton == true {
+//         TopText.text = detailMeme.topTextField
+//            BottomText.text = detailMeme.bottomTextField
+//            imageView.image = detailMeme.image
+//
+//        } else {
+//            TopText.text = "Top"
+//            BottomText.text =  "Bottom"
+//        }
+        print(fromEditButton)
+        print(detailMeme.bottomTextField)
+        
+        
         
     }
     
@@ -63,14 +81,20 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
+ 
+    
+
         
-        //hide camera if disabled
+        
+ //hide camera if disabled
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         
         //subscribe to keyboard notifications
         
         subscribeToKeyboardNotifications()
+
+
         
     }
     
