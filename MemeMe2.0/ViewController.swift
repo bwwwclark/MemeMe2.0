@@ -25,6 +25,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     @IBOutlet weak var beginText: UILabel!
     
+    @IBOutlet weak var cancelButton: UIButton!
+    
     var meme = Meme!()
     //var fromEditButton = Bool?()
     
@@ -46,6 +48,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             TopText.text = meme.topTextField
             BottomText.text = meme.bottomTextField
             imageView.image = meme.image
+            beginText.text = ""
+            cancelButton.hidden = true
+            
         }
     }
     
@@ -171,6 +176,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     func memeImage() -> UIImage {
         //sets created meme as an image for sharing
         toolBar.hidden = true
+        cancelButton.hidden = true
         
         UIGraphicsBeginImageContext(view.frame.size)
         view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
@@ -178,6 +184,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         UIGraphicsEndImageContext()
         
         toolBar.hidden = false
+        cancelButton.hidden = false
+        
         
         return memedImage
     }
@@ -234,8 +242,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         }
         
         
+        
     }
     
+    @IBAction func cancelButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
 }
 
 

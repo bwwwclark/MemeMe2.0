@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3m-lj-yfr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3m-lj-yfr">
                                 <rect key="frame" x="115" y="115" width="370" height="360"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="370" id="2HT-0n-Yl0"/>
@@ -44,7 +44,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1U-fA-as8">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Photos" id="7yv-50-F45">
+                                    <barButtonItem title="Album" id="7yv-50-F45">
                                         <connections>
                                             <action selector="photosButton:" destination="BYZ-38-t0r" id="8cJ-11-2zS"/>
                                         </connections>
@@ -62,11 +62,19 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH4-UP-LiY">
+                                <rect key="frame" x="34" y="28" width="61" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCk-Yf-DFh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Oxr-HM-NUx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2HP-rR-v64"/>
                             <constraint firstItem="bGq-Yi-SV7" firstAttribute="width" secondItem="vxE-Ym-BNV" secondAttribute="width" id="7bR-Yj-qsL"/>
+                            <constraint firstItem="PH4-UP-LiY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="8p2-MF-p3r"/>
                             <constraint firstItem="bGq-Yi-SV7" firstAttribute="height" secondItem="vxE-Ym-BNV" secondAttribute="height" id="DOJ-Cv-9Q4"/>
                             <constraint firstItem="p1U-fA-as8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="EEw-40-2Lx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="p1U-fA-as8" secondAttribute="trailing" constant="-20" id="KdZ-nj-SB6"/>
@@ -75,6 +83,7 @@
                             <constraint firstItem="a3m-lj-yfr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UzW-Ae-jOg"/>
                             <constraint firstItem="bGq-Yi-SV7" firstAttribute="top" secondItem="a3m-lj-yfr" secondAttribute="top" id="Xmd-AK-4YQ"/>
                             <constraint firstItem="bGq-Yi-SV7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z5Y-II-UTn"/>
+                            <constraint firstItem="PH4-UP-LiY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Zdc-mm-wwe"/>
                             <constraint firstItem="Oxr-HM-NUx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fBB-Or-gLg"/>
                             <constraint firstItem="vxE-Ym-BNV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xTF-46-csT"/>
                             <constraint firstItem="a3m-lj-yfr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="y07-cS-qle"/>
@@ -85,6 +94,7 @@
                         <outlet property="TopText" destination="bGq-Yi-SV7" id="3Sg-VU-BJx"/>
                         <outlet property="beginText" destination="Oxr-HM-NUx" id="BmM-9N-Fmr"/>
                         <outlet property="cameraButton" destination="vLB-Y8-yVs" id="BBV-af-W5J"/>
+                        <outlet property="cancelButton" destination="PH4-UP-LiY" id="bmG-2r-A9K"/>
                         <outlet property="imageView" destination="a3m-lj-yfr" id="fLJ-0y-HWF"/>
                         <outlet property="shareButton" destination="XBe-Vd-7N3" id="abr-wG-FEF"/>
                         <outlet property="toolBar" destination="p1U-fA-as8" id="Jib-kw-dEj"/>
@@ -178,7 +188,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="831-69-vgq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="831-69-vgq">
                                 <rect key="frame" x="115" y="120" width="370" height="360"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="370" id="7Pp-rL-XZF"/>
@@ -254,7 +264,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="193" height="153"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkZ-2f-DT1">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkZ-2f-DT1">
                                             <rect key="frame" x="51" y="32" width="90" height="90"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8L-9W-uQi">
@@ -335,6 +345,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ghn-MI-hkW"/>
+        <segue reference="t7g-DQ-uPs"/>
     </inferredMetricsTieBreakers>
 </document>
