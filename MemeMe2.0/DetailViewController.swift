@@ -15,7 +15,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var topText: UITextField!
-
+    
     @IBOutlet weak var bottomText: UITextField!
     
     var meme : Meme!
@@ -47,20 +47,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         textField.autocapitalizationType = .AllCharacters
         textField.textAlignment = .Center
     }
-
+    
     @IBAction func editButton(sender: AnyObject) {
         //perform segue with identifier and pass the text and image to meme editor view
         
-        let storyboard = UIStoryboard (name: "Main", bundle: nil)
-        
-        let editorVC = storyboard.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
-        
-        self.presentViewController(editorVC, animated: true, completion: nil)
-            // editorVC.detailMeme = self.meme
+        let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+        viewController.meme = meme
+        navigationController!.pushViewController(viewController, animated: true)
         
         
-            editorVC.fromEditButton = true
         
-    
-}
+    }
 }

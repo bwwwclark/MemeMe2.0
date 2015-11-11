@@ -112,11 +112,11 @@
             </objects>
             <point key="canvasLocation" x="-775" y="155"/>
         </scene>
-        <!--Item-->
+        <!--Table View-->
         <scene sceneID="NdB-wN-E29">
             <objects>
                 <navigationController id="Ssq-mJ-G3L" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="h6w-hd-XQf"/>
+                    <tabBarItem key="tabBarItem" title="Table View" id="h6w-hd-XQf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kwm-sC-Brw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -316,11 +316,11 @@
             </objects>
             <point key="canvasLocation" x="719" y="618"/>
         </scene>
-        <!--Item-->
+        <!--Collection View-->
         <scene sceneID="4Gh-pL-s9C">
             <objects>
                 <navigationController id="Jdm-aE-kzy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="lV5-Ra-8Hl"/>
+                    <tabBarItem key="tabBarItem" title="Collection View" id="lV5-Ra-8Hl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bhW-KS-DzE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -25,8 +25,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     @IBOutlet weak var beginText: UILabel!
     
-    var detailMeme = Meme!()
-    var fromEditButton = Bool?()
+    var meme = Meme!()
+    //var fromEditButton = Bool?()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,25 +34,19 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
         // set default text
         
-      
+        
         prepTextField(BottomText,defaultText: "BOTTOM")
         prepTextField(TopText,defaultText: "TOP")
         shareButton.enabled = false
         
-//        if fromEditButton == true {
-//         TopText.text = detailMeme.topTextField
-//            BottomText.text = detailMeme.bottomTextField
-//            imageView.image = detailMeme.image
-//
-//        } else {
-//            TopText.text = "Top"
-//            BottomText.text =  "Bottom"
-//        }
-        print(fromEditButton)
-        print(detailMeme.bottomTextField)
+        //Set meme attributes from DetailViewController if they exist
         
-        
-        
+        if meme == nil{
+        }else {
+            TopText.text = meme.topTextField
+            BottomText.text = meme.bottomTextField
+            imageView.image = meme.image
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,20 +75,14 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(animated)
- 
-    
-
         
-        
- //hide camera if disabled
+        //hide camera if disabled
         
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         
         //subscribe to keyboard notifications
         
         subscribeToKeyboardNotifications()
-
-
         
     }
     
@@ -193,10 +181,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
         return memedImage
     }
-   
-        
+    
+    
     func save(meme :Meme) {
-            (UIApplication.sharedApplication().delegate as! AppDelegate).memes.append(meme)
+        (UIApplication.sharedApplication().delegate as! AppDelegate).memes.append(meme)
     }
     
     @IBAction func photosButton(sender: AnyObject) {

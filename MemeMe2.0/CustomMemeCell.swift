@@ -13,7 +13,7 @@ class CustomMemeCell: UICollectionViewCell {
     
     @IBOutlet weak var topTextLabel: UILabel!
     
-     
+    
     @IBOutlet weak var bottomTextLabel: UILabel!
     
     @IBOutlet weak var imageView: UIImageView!
