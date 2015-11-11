@@ -55,7 +55,7 @@ class TableViewController: UITableViewController {
     //navigate to detail view controller while passing meme
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let detailController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+        let detailController = storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         detailController.meme = memes[indexPath.item]
         navigationController!.pushViewController(detailController, animated: true)
         

@@ -26,12 +26,7 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bGq-Yi-SV7">
-                                <rect key="frame" x="212" y="115" width="176" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vxE-Ym-BNV">
-                                <rect key="frame" x="212" y="445" width="176" height="30"/>
+                                <rect key="frame" x="212" y="159" width="176" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -69,19 +64,24 @@
                                     <action selector="cancelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCk-Yf-DFh"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vxE-Ym-BNV">
+                                <rect key="frame" x="212" y="389" width="176" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Oxr-HM-NUx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2HP-rR-v64"/>
                             <constraint firstItem="bGq-Yi-SV7" firstAttribute="width" secondItem="vxE-Ym-BNV" secondAttribute="width" id="7bR-Yj-qsL"/>
                             <constraint firstItem="PH4-UP-LiY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="8p2-MF-p3r"/>
+                            <constraint firstItem="a3m-lj-yfr" firstAttribute="top" secondItem="bGq-Yi-SV7" secondAttribute="bottom" constant="-74" id="8tM-4I-sg3"/>
                             <constraint firstItem="bGq-Yi-SV7" firstAttribute="height" secondItem="vxE-Ym-BNV" secondAttribute="height" id="DOJ-Cv-9Q4"/>
                             <constraint firstItem="p1U-fA-as8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="EEw-40-2Lx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="p1U-fA-as8" secondAttribute="trailing" constant="-20" id="KdZ-nj-SB6"/>
-                            <constraint firstItem="vxE-Ym-BNV" firstAttribute="bottom" secondItem="a3m-lj-yfr" secondAttribute="bottom" id="KmA-wT-sDk"/>
+                            <constraint firstItem="vxE-Ym-BNV" firstAttribute="top" secondItem="a3m-lj-yfr" secondAttribute="bottom" constant="-86" id="MNc-SX-66h"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="p1U-fA-as8" secondAttribute="bottom" id="NWb-Uf-E7x"/>
                             <constraint firstItem="a3m-lj-yfr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UzW-Ae-jOg"/>
-                            <constraint firstItem="bGq-Yi-SV7" firstAttribute="top" secondItem="a3m-lj-yfr" secondAttribute="top" id="Xmd-AK-4YQ"/>
                             <constraint firstItem="bGq-Yi-SV7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z5Y-II-UTn"/>
                             <constraint firstItem="PH4-UP-LiY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Zdc-mm-wwe"/>
                             <constraint firstItem="Oxr-HM-NUx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fBB-Or-gLg"/>
@@ -198,38 +198,34 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2LG-2A-MzD">
-                                <rect key="frame" x="201" y="120" width="199" height="61"/>
+                                <rect key="frame" x="207" y="157" width="187" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HlD-YR-NnI">
-                                <rect key="frame" x="207" y="427" width="187" height="53"/>
+                                <rect key="frame" x="207" y="360" width="187" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIE-D3-OdB">
-                                <rect key="frame" x="277" y="500" width="46" height="30"/>
-                                <state key="normal" title="Edit"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kx-An-pco">
-                                <rect key="frame" x="277" y="500" width="46" height="30"/>
+                                <rect key="frame" x="512" y="43" width="46" height="30"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
-                                    <action selector="editButton:" destination="waB-Yg-3ZP" eventType="touchUpInside" id="yOW-0p-BMZ"/>
+                                    <action selector="editButton:" destination="waB-Yg-3ZP" eventType="touchUpInside" id="ghn-UZ-XxM"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="HlD-YR-NnI" firstAttribute="centerX" secondItem="831-69-vgq" secondAttribute="centerX" id="7MD-iD-1lk"/>
-                            <constraint firstItem="nIE-D3-OdB" firstAttribute="centerX" secondItem="z9r-LK-t58" secondAttribute="centerX" id="8aV-i0-bMv"/>
-                            <constraint firstItem="nIE-D3-OdB" firstAttribute="top" secondItem="HlD-YR-NnI" secondAttribute="bottom" constant="20" id="QfU-Li-2Sl"/>
+                            <constraint firstItem="831-69-vgq" firstAttribute="top" secondItem="2LG-2A-MzD" secondAttribute="bottom" constant="-98" id="BDe-Gm-zwx"/>
                             <constraint firstItem="831-69-vgq" firstAttribute="centerY" secondItem="z9r-LK-t58" secondAttribute="centerY" id="T8P-Lx-UUP"/>
                             <constraint firstItem="831-69-vgq" firstAttribute="centerX" secondItem="z9r-LK-t58" secondAttribute="centerX" id="UB4-3M-0nT"/>
-                            <constraint firstItem="0kx-An-pco" firstAttribute="top" secondItem="831-69-vgq" secondAttribute="bottom" constant="20" id="UwQ-gy-lig"/>
                             <constraint firstItem="2LG-2A-MzD" firstAttribute="top" secondItem="831-69-vgq" secondAttribute="top" id="X9L-9G-t9f"/>
+                            <constraint firstItem="HlD-YR-NnI" firstAttribute="top" secondItem="831-69-vgq" secondAttribute="bottom" constant="-120" id="Y40-ye-dsi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nIE-D3-OdB" secondAttribute="trailing" constant="22" id="aNl-Px-rAc"/>
+                            <constraint firstItem="nIE-D3-OdB" firstAttribute="top" secondItem="Dcu-l8-cfK" secondAttribute="bottom" constant="23" id="evE-Ts-Lhv"/>
                             <constraint firstItem="HlD-YR-NnI" firstAttribute="bottom" secondItem="831-69-vgq" secondAttribute="bottom" id="nuR-ak-P56"/>
-                            <constraint firstItem="0kx-An-pco" firstAttribute="centerX" secondItem="z9r-LK-t58" secondAttribute="centerX" id="t3L-lN-BaQ"/>
                             <constraint firstItem="2LG-2A-MzD" firstAttribute="centerX" secondItem="831-69-vgq" secondAttribute="centerX" id="vTX-VY-IHE"/>
                         </constraints>
                     </view>

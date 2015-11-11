@@ -30,7 +30,7 @@ class CollectionViewController: UICollectionViewController{
         
         //set flow layout dimensions
         let space: CGFloat = 3.0
-        let dimension = (self.view.frame.size.width - (2 * space)) / 3.0
+        let dimension = (view.frame.size.width - (2 * space)) / 3.0
         
         flowLayout.minimumInteritemSpacing = space
         flowLayout.itemSize = CGSizeMake(dimension, dimension)
@@ -66,7 +66,7 @@ class CollectionViewController: UICollectionViewController{
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
     {
         //select meme and send to detail view controller
-        let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
+        let detailController = storyboard!.instantiateViewControllerWithIdentifier("DetailViewController") as! DetailViewController
         
         detailController.meme = memes[indexPath.item]
         navigationController!.pushViewController(detailController, animated: true)

@@ -49,7 +49,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             BottomText.text = meme.bottomTextField
             imageView.image = meme.image
             beginText.text = ""
-            cancelButton.hidden = true
+            shareButton.enabled = true
             
         }
     }
@@ -74,6 +74,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         textField.text = defaultText
         textField.autocapitalizationType = .AllCharacters
         textField.textAlignment = .Center
+        
     }
     
     
@@ -200,7 +201,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        self.presentViewController(pickerController, animated: true, completion: nil)
+        presentViewController(pickerController, animated: true, completion: nil)
         
     }
     
@@ -246,7 +247,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     @IBAction func cancelButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
         
     }
 }

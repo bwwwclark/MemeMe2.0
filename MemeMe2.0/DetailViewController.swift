@@ -51,11 +51,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBAction func editButton(sender: AnyObject) {
         //perform segue with identifier and pass the text and image to meme editor view
         
-        let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+        let viewController = storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
         viewController.meme = meme
-        navigationController!.pushViewController(viewController, animated: true)
-        
-        
+        navigationController!.presentViewController(viewController, animated: true, completion: nil)
         
     }
 }
